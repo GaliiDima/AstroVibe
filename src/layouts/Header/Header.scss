@@ -1,0 +1,169 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.header {
+  background: url("../../assets/header-bg.png") 0 0 / cover no-repeat;
+
+  &__container {
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 60px;
+  }
+
+  &__navigation-menu {
+    margin-bottom: 150px;
+  }
+}
+
+.content-header {
+  display: flex;
+
+  &__preview {
+    flex: 1 1 50%;
+  }
+
+  &__title {
+    @include typography(500, 45px, 64px);
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include typography(400, 24px);
+    margin-bottom: 50px;
+    color: $text-grey;
+  }
+
+  &__app-store-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__images {
+    flex: 1 1 50%;
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__img {
+    position: absolute;
+
+    &_left {
+      left: 25px;
+      width: 239px;
+      height: 483px;
+    }
+
+    &_right {
+      left: 205px;
+      width: 265px;
+      height: 541px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .header {
+    &__container {
+      padding: 20px 40px;
+    }
+
+    &__navigation-menu {
+      margin-bottom: 9px;
+    }
+  }
+
+  .content-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+
+    &__images {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__img {
+      position: relative;
+
+      &_left {
+        left: 45px;
+      }
+
+      &_right {
+        left: -45px;
+      }
+    }
+  }
+
+  .navigation-menu {
+    margin-bottom: 9px;
+
+    &__burger-icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      padding: 15px;
+    }
+  }
+
+  .content-header {
+    &__title {
+      @include title-large("medium");
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      @include typography(400, 16px, 24px);
+      letter-spacing: 0.1px;
+      margin-bottom: 40px;
+    }
+
+    &__app-store-buttons {
+      flex-direction: column;
+    }
+
+    &__img {
+      position: relative;
+
+      &_left {
+        left: 45px;
+        width: 162px;
+        height: 328px;
+      }
+
+      &_right {
+        left: -45px;
+        width: 180px;
+        height: 362px;
+      }
+    }
+  }
+
+  .navigation-menu {
+    &__list {
+      display: none;
+    }
+
+    &__burger-icon {
+      display: flex;
+      background-image: url("../../assets/menu.svg");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__logo-title {
+      font-size: 14px;
+    }
+  }
+}

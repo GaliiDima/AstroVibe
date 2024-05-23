@@ -1,0 +1,44 @@
+---
+import benefitsBg_desktop from '../../../assets/app-benefits-image_desktop.png';
+import benefitsBg_tablet from '../../../assets/app-benefits-image_mobile.png';
+
+import "./AppBenefits.scss";
+---
+
+<section class="app-benefits" id="benefits">
+  <div class="app-benefits__container">
+    <div class="app-benefits__content">
+      <h2 class="app-benefits__title">
+        Why AstroVibe Stands Out in the Galaxy
+      </h2>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_desktop">
+        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_tablet">
+        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_mobile">
+        <img src={benefitsBg_tablet.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
+
+      <ul class="app-benefits__list">
+        <li class="app-benefits__list-item">
+          Deep personalization for a unique celestial guide.
+        </li>
+        <li class="app-benefits__list-item">
+          Insightful compatibility checks to guide your relationships.
+        </li>
+        <li class="app-benefits__list-item">
+          Elegant, user-friendly app design for an immersive experience.
+        </li>
+        <li class="app-benefits__list-item">
+          Free access to daily readings, with premium features for those
+          seeking a deeper connection.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

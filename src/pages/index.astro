@@ -1,0 +1,18 @@
+---
+import Footer from '../layouts/Footer/Footer.astro';
+import Header from '../layouts/Header/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main/Main.astro';
+import NavigationMenu from '../layouts/NavigationMenu/NavigationMenu';
+
+import './index.scss'
+---
+
+<Layout title="AstroVibe">
+	<div class="page">
+		<Header />
+		<NavigationMenu />
+		<Main />
+		<Footer />
+	</div>
+</Layout>

@@ -1,0 +1,64 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: 150px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  &__logo-title {
+    font-size: 24px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__burger-icon {
+    display: none;
+  }
+
+  &__link {
+    color: $text-grey;
+    @include body-text(14);
+  }
+}
+
+@media (max-width: 1150px) {
+  .navigation-menu {
+    margin-bottom: 9px;
+
+    &__burger-icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-menu {
+    &__list {
+      display: none;
+    }
+
+    &__burger-icon {
+      display: flex;
+      background-image: url("../../assets/menu.svg");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__logo-title {
+      font-size: 14px;
+    }
+  }
+}

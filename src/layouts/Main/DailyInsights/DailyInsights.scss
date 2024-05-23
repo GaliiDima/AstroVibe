@@ -1,0 +1,67 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.daily-insights {
+  background-color: $insights-bg;
+
+  &__container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 120px 20px;
+    margin: 0 auto;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 660px;
+    text-align: center;
+    @include typography(600, 45px, 64px);
+    margin-bottom: 100px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__constellation-image {
+    position: absolute;
+    z-index: 1;
+
+    &_1 {
+      top: 2%;
+      left: 4%;
+    }
+
+    &_2 {
+      bottom: 18%;
+      left: 2.5%;
+    }
+
+    &_3 {
+      bottom: 51%;
+      right: 4%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .daily-insights {
+    &__content {
+      padding: 70px 15px;
+    }
+
+    &__title {
+      @include title-large("medium");
+      margin-bottom: 50px;
+    }
+  }
+}

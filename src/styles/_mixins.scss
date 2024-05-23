@@ -1,0 +1,70 @@
+// Typography
+
+@mixin typography($weight: 400, $size: "16px", $lineHeight: normal) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+@mixin title-large($weight: "medium") {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: if($weight == "semi-bold", 600, 500);
+}
+
+@mixin title-large($weight: "medium") {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: if($weight == "semi-bold", 600, 500);
+}
+
+@mixin title-medium {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+@mixin title-small {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+@mixin body-text($size: 16, $weight: "regular") {
+  font-family: "Poppins", sans-serif;
+  font-size: #{$size}px;
+  line-height: if($size == 14, 20px, 24px);
+  font-weight: if($weight == "medium", 500, 400);
+  letter-spacing: if($size == 12, 0.4px, if($size == 14, 0.25px, 0.1px));
+}
+
+@mixin body-uppercase {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin button-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@mixin label-text($size: 12, $spacing: 0.5) {
+  font-family: "Poppins", sans-serif;
+  font-size: #{$size}px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: #{$spacing}px;
+}

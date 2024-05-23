@@ -1,0 +1,76 @@
+---
+import Button from '../../../components/Button/Button';
+
+import footerBg from '../../../assets/footer-bg.png';
+
+import './MembershipOptions.scss';
+---
+
+<section class="membership" id="membership">
+  <div class="membership__container">
+    <div class="membership__content">
+      <h3 class="membership__title">Free vs Premium Plan</h3>
+      <div class="membership__plan-comparison plan-comparison">
+        <table class="plan-comparison__table">
+          <thead class="plan-comparison__thead">
+            <tr>
+              <th>Feature</th>
+              <th>Free</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody class="plan-comparison__tbody">
+            <tr>
+              <td>All 12 signs’ characteristics</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td>Daily Horoscope</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td>Compatibility</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td>Personalized Daily Horoscope</td>
+              <td></td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td>Personalized Compatibility</td>
+              <td></td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td>Add Free Access to All Content</td>
+              <td></td>
+              <td>✔️</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="membership__join-us join-us-membership" id="download">
+        <h3 class="join-us-membership__title">
+          Join a community of star seekers.
+        </h3>
+        <p class="join-us-membership__description">
+          Download AstroVibe and let the cosmos guide your journey.
+        </p>
+
+        <div class="join-us-membership__buttons">
+          <Button variant="Google Play" client:load/>
+          <Button variant="App Store" client:load/>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="membership__bg-image">
+    <img src={footerBg.src} alt="membership background" class="membership__bg-img">
+  </div>
+</section>

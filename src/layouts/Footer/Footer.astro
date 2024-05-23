@@ -1,0 +1,32 @@
+---
+import './Footer.scss';
+
+const FOOTER_LINKS = [
+  {
+    href: "/",
+    label: "Privacy Policy"
+  }, 
+  {
+    href: "/terms-of-service",
+    label: "Terms of Service"
+  }, 
+  {
+    href: "/",
+    label: "Contact Us"
+  }
+]
+---
+
+<footer class="footer" id="footer">
+  <div class="footer__container">
+    <nav class="footer__resource-links">
+      <ul class="footer__list">
+        {FOOTER_LINKS.map((link) => (
+          <li class="footer__item">
+            <a href={link.href} class="footer__link">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+.page {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &__body {
+    overflow: hidden;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+}

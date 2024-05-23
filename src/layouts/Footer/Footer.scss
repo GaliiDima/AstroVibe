@@ -1,0 +1,43 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.footer {
+  &__image {
+    position: relative;
+    padding-bottom: 54.5%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__resource-links {
+    background-color: $benefits-bg;
+  }
+
+  &__list {
+    display: flex;
+    padding: 70px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__link {
+    @include body-text(14);
+    color: $text-grey;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    &__list {
+      flex-direction: column;
+    }
+  }
+}

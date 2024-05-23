@@ -1,0 +1,92 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.terms-of-service-page {
+  background-color: $insights-bg;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 20px 60px;
+    margin-bottom: 120px;
+  }
+
+  &__navigation-header {
+    margin-bottom: 150px;
+  }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__title {
+    @include typography(600, 45px, 64px);
+  }
+
+  &__date {
+    color: $tos-text-color;
+    @include body-text(14, "regular");
+  }
+}
+
+.article-tos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include body-text(16, "medium");
+  }
+
+  &__paragraph {
+    color: $tos-text-color;
+    @include body-text(14, "regular");
+  }
+
+  &__list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__list-item {
+    color: $tos-text-color;
+    @include body-text(14, "medium");
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $text-grey;
+      position: absolute;
+      top: 8px;
+      left: -20px;
+    }
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-of-service-page {
+    &__content {
+      padding: 16px;
+    }
+
+    &__navigation-header {
+      margin-bottom: 70px;
+    }
+  }
+}

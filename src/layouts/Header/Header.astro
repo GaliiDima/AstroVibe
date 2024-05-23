@@ -1,0 +1,41 @@
+---
+import firstContentImage from "../../assets/header-first-image.png";
+import secondContentImage from "../../assets/header-second-image.png";
+import Button from "../../components/Button/Button.tsx";
+import NavigationHeader from "../../components/NavigationHeader/NavigationHeader";
+
+import './Header.scss'
+
+---
+
+<header class="page__header header" id="header">
+  <div class="header__container">
+    <NavigationHeader classnames="header__navigation-menu" />
+    <section class="header__content content-header">
+      <div class="content-header__preview">
+        <h1 class="content-header__title">
+          Unlock the Secrets of <br /> Your Stars with AstroVibe
+        </h1>
+        <p class="content-header__description">
+          Your Daily Compass for Love, Career, and Personal Growth
+        </p>
+        <div class="content-header__app-store-buttons">
+          <Button variant="Google Play" client:load  />
+          <Button variant="App Store" client:load  />
+        </div>
+      </div>
+      <div class="content-header__images">
+        <img
+          src={firstContentImage.src}
+          alt="iPhone 14 Pro Space"
+          class="content-header__img content-header__img_left"
+        />
+        <img
+          src={secondContentImage.src}
+          alt="iPhone 15 Pro"
+          class="content-header__img content-header__img_right"
+        />
+      </div>
+    </section>
+  </div>
+</header>

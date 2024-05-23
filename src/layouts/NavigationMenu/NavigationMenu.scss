@@ -1,0 +1,63 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.menu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $benefits-bg;
+  transform: translateX(-100%);
+  transition: all 0.3s linear 0s;
+
+  &:target {
+    transform: translateX(0);
+  }
+
+  &__content {
+    position: relative;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  &__logo-title {
+    font-size: 14px;
+  }
+
+  &__close {
+    background-image: url("../../assets/close.svg");
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    text-align: right;
+    gap: 24px;
+  }
+
+  &__link {
+    @include body-text(14, "regular");
+    color: $text-grey;
+  }
+}
